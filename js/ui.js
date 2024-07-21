@@ -2,7 +2,7 @@
 const createNumericalButtons = () => {
   const numericalButtons = document.querySelector('.numerical-buttons');
   
-  for (let i = 0; i < 11; i += 1) {
+  for (let i = 0; i < 12; i += 1) {
     const button = document.createElement('button');    
 
     button.textContent = `${i}`;
@@ -11,6 +11,9 @@ const createNumericalButtons = () => {
     if (i === 10) {
       button.textContent = '.';
       button.setAttribute('class', `numerical-button dot button`);
+    } else if (i === 11) {
+      button.textContent = '=';
+      button.setAttribute('class', `numerical-button equal button`);
     }
 
     numericalButtons.appendChild(button);    
@@ -42,6 +45,9 @@ const createOperatorButtons = () => {
         button.textContent = '-';
         button.setAttribute('class', 'operator-button subtraction button');
         break;
+      case 4:
+        button.textContent = 'Clear';
+        button.setAttribute('class', 'operator-button clear button');
     }
     operators.appendChild(button);    
   }  
