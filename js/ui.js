@@ -2,13 +2,20 @@
 const createNumericalButtons = () => {
   const numericalButtons = document.querySelector('.numerical-buttons');
   
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < 11; i += 1) {
     const button = document.createElement('button');    
 
     button.textContent = `${i}`;
     button.setAttribute('class', `numerical-button number-${i} button`);
+
+    if (i === 10) {
+      button.textContent = '.';
+      button.setAttribute('class', `numerical-button dot button`);
+    }
+
     numericalButtons.appendChild(button);    
   }
+
 };
 
 // Create buttons for basic operator (* / + -)
