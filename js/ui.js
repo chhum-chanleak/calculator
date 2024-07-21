@@ -42,15 +42,10 @@ const createOperatorButtons = () => {
         button.textContent = '-';
         button.setAttribute('class', 'operator-button subtraction button');
         break;
-      case 4:
-        button.textContent = '=';
-        button.setAttribute('class', 'operator-button subtraction button');
-        break;
     }
     operators.appendChild(button);    
   }  
 };
-
 
 createNumericalButtons();
 createOperatorButtons();
