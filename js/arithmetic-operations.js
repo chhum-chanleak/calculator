@@ -1,5 +1,5 @@
 // Operate basic arithmetics operation and return result
-const operations = (operatorType, num1, num2) => {
+const operate = (operatorType, num1, num2) => {
   
   switch (operatorType) {
     case '+':
