@@ -53,5 +53,17 @@ const createOperatorButtons = () => {
   }  
 };
 
+// Clear the display of the calculator
+const clearCalculator = () => {
+  const display = document.querySelector('.display');
+  display.value = '';
+};
+
+// Start the calculator
 createNumericalButtons();
 createOperatorButtons();
+
+// Clear button
+const clearButton = document.querySelector('.clear');
+clearButton.addEventListener('click', clearCalculator);
+
