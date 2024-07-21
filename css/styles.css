@@ -17,7 +17,7 @@ body {
   border: 4px solid #84057c;
   border-radius: 4px;
   height: 620px;
-  width: 420px;
+  width: 480px;
   margin-top: 20%;
   display: flex;
   align-items: flex-start;
@@ -27,27 +27,24 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 0.5rem;
-    width: 300px;
+    width: 380px;
     align-items: center;
+    background-color: #84057c44;
   }
 
   & .numerical-buttons .numerical-button {
     display: inline-block;
     height: 40px;
-    width: 33.3%;
+    width: 32.5%;
+    margin: 1px 1px 0 0;
   }
   
   & .numerical-button.number-0 {
     order: 1;
-    margin-right: auto;
   }
 
-  & .numerical-button.dot {
-    order: 2;
-  }
-  
-  & .numerical-button.equal {
-    order: 2;
+  & .numerical-button.dot, .numerical-button.equal {
+    order: 2
   }
 
   & .operators {
@@ -56,12 +53,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    background-color: aqua;
   }
 
   & button.operator-button {
     display: inline-block;
     height: 40px;
-    width: 100px;
+    width: 80px;
   }
 
   & .button {
@@ -71,6 +69,17 @@ body {
 
   & .button:hover {
     cursor: pointer;
+  }
+
+  & .display {
+    border-radius: 4px;
+    width: 100%;
+    height: 2vh;
+    display: inline-block;
+  }
+
+  & .display:focus {
+    outline: none;
   }
 }
 
