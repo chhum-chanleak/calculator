@@ -70,6 +70,7 @@ const handleButtons = () => {
   
   for (let i = 0; i < buttons.length; i += 1) {
     buttons[i].addEventListener('click', (event) => {
+      display.focus();
       if (event.target.textContent !== ' = ' && event.target.textContent !== 'Clear' && event.target.textContent !== ' ⌫ ')
       display.value += event.target.textContent;
     });
