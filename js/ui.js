@@ -61,7 +61,7 @@ const clearCalculator = () => {
   display.value = '';
 };
 
-// Display numerical values when click
+// Display numerical values when clicked
 const handleButtons = () => {
   const buttons = document.querySelectorAll('.button');
   const display = document.querySelector('.display');
@@ -74,6 +74,14 @@ const handleButtons = () => {
       display.value += event.target.textContent;
     });
   }
+};
+
+// Remove preceding(previous) character
+const handleBackspaceButton = () => {
+  const displayInput = document.querySelector('.display');
+  const displayInputValue = getDisplayValue();
+
+  displayInput.value = displayInputValue.slice(0, displayInputValue.length - 1);
 };
 
 // Start the calculator
@@ -91,3 +99,5 @@ clearButton.addEventListener('click', clearCalculator);
 const equalButton = document.querySelector('.equal');
 equalButton.addEventListener('click', handleEqual);
 
+const backspaceButton = document.querySelector('.backspace');
+backspaceButton.addEventListener('click', handleBackspaceButton);
