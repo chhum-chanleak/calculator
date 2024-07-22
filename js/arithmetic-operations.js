@@ -27,7 +27,7 @@ const convertDisplayValue = (str) => {
   return newArr;
 };
 
-// Calculator the expression
+// Calculate the expression
 const handleEqual = () => {
   const displayInputValue = convertDisplayValue(getDisplayValue());
   let result = operate(displayInputValue[1], displayInputValue[0], displayInputValue[2]);

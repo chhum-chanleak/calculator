@@ -14,9 +14,10 @@ body {
 }
 
 .calculator {
-  border: 4px solid #84057c;
+  border: 4px solid #920396;
+  background-color: #92039622;
   border-radius: 4px;
-  height: 620px;
+  height: 280px;
   width: 480px;
   margin-top: 20%;
   display: flex;
@@ -26,10 +27,9 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0.5rem;
+    padding: 8px;
     width: 380px;
     align-items: center;
-    background-color: #84057c44;
   }
 
   & .numerical-buttons .numerical-button {
@@ -53,7 +53,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    background-color: aqua;
   }
 
   & button.operator-button {
@@ -71,16 +70,27 @@ body {
     cursor: pointer;
   }
 
+  & .input {
+    padding: 8px;
+  }
+
   & .display {
     border-radius: 4px;
-    width: 100%;
+    width: 98%;
+    background-color: #aaa2;
     height: 2vh;
     display: inline-block;
+    padding: 2px;
   }
 
   & .display:focus {
     outline: none;
   }
+
+  & .backspace {
+    color: #f00;
+  }
 }
+
 
 
