@@ -90,6 +90,16 @@ const handleBackspaceButton = () => {
   displayInput.value = displayInputValue.slice(0, displayInputValue.length - 1);
 };
 
+// Dispatch handleEqual() when user clicks 'Enter' key
+const handleEqualWithEnterKey = (event) => {
+  const equalButton = document.querySelector('.equal');
+  const clickEvent = new Event('click', handleEqual);
+
+  if (event.key === 'Enter') {
+    equalButton.dispatchEvent(clickEvent);
+  }
+};
+
 // Start the calculator
 createNumericalButtons();
 createOperatorButtons();
@@ -107,3 +117,7 @@ equalButton.addEventListener('click', handleEqual);
 
 const backspaceButton = document.querySelector('.backspace');
 backspaceButton.addEventListener('click', handleBackspaceButton);
+
+const body = document.body;
+body.addEventListener('keydown', handleEqualWithEnterKey);
+
