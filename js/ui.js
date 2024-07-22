@@ -84,5 +84,6 @@ const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', clearCalculator);
 
 // Apply event onto Clear button
-const equal = document.querySelector('.equal');
-equal.addEventListener('click', handleEqual);
+const equalButton = document.querySelector('.equal');
+equalButton.addEventListener('click', handleEqual);
+
