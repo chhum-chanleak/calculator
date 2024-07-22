@@ -115,9 +115,11 @@ clearButton.addEventListener('click', clearCalculator);
 const equalButton = document.querySelector('.equal');
 equalButton.addEventListener('click', handleEqual);
 
+// Apply event onto backspace button
 const backspaceButton = document.querySelector('.backspace');
 backspaceButton.addEventListener('click', handleBackspaceButton);
 
+// Apply handleEqual() onto 'Enter' key
 const body = document.body;
 body.addEventListener('keydown', handleEqualWithEnterKey);
 
