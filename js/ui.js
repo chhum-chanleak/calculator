@@ -12,13 +12,11 @@ const createNumericalButtons = () => {
       button.textContent = '.';
       button.setAttribute('class', `numerical-button dot button`);
     } else if (i === 11) {
-      button.textContent = '=';
+      button.textContent = ' = ';
       button.setAttribute('class', `numerical-button equal button`);
     }
-
     numericalButtons.appendChild(button);    
   }
-
 };
 
 // Create buttons for basic operator (* / + -)
@@ -30,19 +28,19 @@ const createOperatorButtons = () => {
 
     switch (i) {
       case 0:
-        button.textContent = '*';
+        button.textContent = ' * ';
         button.setAttribute('class', 'operator-button multiplication button');
         break;
       case 1:
-        button.textContent = '/';
+        button.textContent = ' / ';
         button.setAttribute('class', 'operator-button division button');
         break;
       case 2:
-        button.textContent = '+';
+        button.textContent = ' + ';
         button.setAttribute('class', 'operator-button add button');
         break;
       case 3:
-        button.textContent = '-';
+        button.textContent = ' - ';
         button.setAttribute('class', 'operator-button subtraction button');
         break;
       case 4:
@@ -59,11 +57,35 @@ const clearCalculator = () => {
   display.value = '';
 };
 
+// Display numerical values when click
+const handleButtons = () => {
+  const buttons = document.querySelectorAll('.button');
+  const display = document.querySelector('.display');
+
+  display.value = '';
+  
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].addEventListener('click', (event) => {
+      if (event.target.textContent !== '=' || event.target.textContent !== 'Clear')
+      display.value += `${event.target.textContent}`;
+    });
+  }
+};
+
 // Start the calculator
 createNumericalButtons();
 createOperatorButtons();
 
-// Clear button
+// Display numerical value when button is clicked
+handleButtons();
+
+// Apply event onto Clear button
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', clearCalculator);
 
+// // Apply event onto display
+// const input = document.querySelector('.display');
+// input.addEventListener('change', (event) => {
+//   input.value = input.value;
+//   console.log(input.value);
+// })
