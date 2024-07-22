@@ -23,7 +23,7 @@ const createNumericalButtons = () => {
 const createOperatorButtons = () => {
   const operators = document.querySelector('.operators');
 
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < 6; i += 1) {
     const button = document.createElement('button');
 
     switch (i) {
@@ -44,6 +44,10 @@ const createOperatorButtons = () => {
         button.setAttribute('class', 'operator-button subtraction button');
         break;
       case 4:
+        button.textContent = ' ⌫ ';
+        button.setAttribute('class', 'operator-button backspace button');
+        break;
+      case 5:
         button.textContent = 'Clear';
         button.setAttribute('class', 'operator-button clear button');
     }
