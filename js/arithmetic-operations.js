@@ -1,16 +1,26 @@
 // Operate basic arithmetics operation and return result
 const operate = (operatorType, num1, num2) => {
-  
+
   switch (operatorType) {
     case '+':
-      return parseInt(num1) + parseInt(num2);
+      return parseFloat(num1) + parseFloat(num2);
     case '-':
-      return parseInt(num1) - parseInt(num2);
+      return parseFloat(num1) - parseFloat(num2);
     case '*':
-      return parseInt(num1) * parseInt(num2);
+      return parseFloat(num1) * parseFloat(num2);
     case '/':
-      return parseInt(num1) / parseInt(num2);
+      return parseFloat(num1) / parseFloat(num2);
     default:
       return 'Unknown operator';
-  };
+  };  
 };
+
+// Get input value
+const getDisplayValue = () => {
+  const displayInput = document.querySelector('.display');
+  return displayInput.value;
+};
+
+
+
+
