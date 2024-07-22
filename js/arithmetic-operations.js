@@ -21,6 +21,11 @@ const getDisplayValue = () => {
   return displayInput.value;
 };
 
+// Convert input value
+const convertDisplayValue = (str) => {
+  const newArr = str.split(' ');
+  return newArr;
+};
 
 
 
