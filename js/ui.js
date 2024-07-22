@@ -70,9 +70,14 @@ const handleButtons = () => {
   
   for (let i = 0; i < buttons.length; i += 1) {
     buttons[i].addEventListener('click', (event) => {
+      // Focus on display input field every time a numerical-button is clicked
       display.focus();
-      if (event.target.textContent !== ' = ' && event.target.textContent !== 'Clear' && event.target.textContent !== ' ⌫ ')
-      display.value += event.target.textContent;
+      if (display.value === '0') {
+        clearCalculator();
+        display.value += event.target.textContent;           
+      } else if (event.target.textContent !== ' = ' && event.target.textContent !== 'Clear' && event.target.textContent !== ' ⌫ ') {
+          display.value += event.target.textContent;     
+      }
     });
   }
 };
