@@ -66,8 +66,8 @@ const handleButtons = () => {
   
   for (let i = 0; i < buttons.length; i += 1) {
     buttons[i].addEventListener('click', (event) => {
-      if (event.target.textContent !== '=' || event.target.textContent !== 'Clear')
-      display.value += `${event.target.textContent}`;
+      if (event.target.textContent !== ' = ' && event.target.textContent !== 'Clear')
+      display.value += event.target.textContent;
     });
   }
 };
@@ -83,9 +83,6 @@ handleButtons();
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', clearCalculator);
 
-// // Apply event onto display
-// const input = document.querySelector('.display');
-// input.addEventListener('change', (event) => {
-//   input.value = input.value;
-//   console.log(input.value);
-// })
+// Apply event onto Clear button
+const equal = document.querySelector('.equal');
+equal.addEventListener('click', handleEqual);
