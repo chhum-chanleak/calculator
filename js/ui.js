@@ -91,12 +91,16 @@ const handleBackspaceButton = () => {
 };
 
 // Dispatch handleEqual() when user clicks 'Enter' key
-const handleEqualWithEnterKey = (event) => {
+const handleEqualWithKeys = (event) => {
   const equalButton = document.querySelector('.equal');
   const clickEvent = new Event('click', handleEqual);
-
+  console.log(event.key);
   if (event.key === 'Enter') {
     equalButton.dispatchEvent(clickEvent);
+  } else if (event.key === '=') {
+    // Apply the event but not '=' string
+    equalButton.dispatchEvent(clickEvent);
+    event.preventDefault();
   }
 };
 
@@ -134,7 +138,7 @@ backspaceButton.addEventListener('click', handleBackspaceButton);
 
 // Apply handleEqual() onto 'Enter' key
 const body = document.body;
-body.addEventListener('keydown', handleEqualWithEnterKey);
+body.addEventListener('keydown', handleEqualWithKeys);
 
 // Apply handleEqual() onto 'Enter' key
 const displayInput = document.querySelector('.display');
