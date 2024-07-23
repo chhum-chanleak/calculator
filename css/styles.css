@@ -60,6 +60,10 @@ body {
     order: 2
   }
 
+  & .numerical-button.equal {
+    background-color: #920396;
+  }
+
   & .operators {
     padding: 0.5rem;
     width: 100px;
@@ -72,6 +76,10 @@ body {
     display: inline-block;
     height: 40px;
     width: 80px;
+  }
+
+  & button.clear {
+    color: #720475;
   }
 
   & .button {
