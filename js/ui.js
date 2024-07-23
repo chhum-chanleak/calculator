@@ -94,7 +94,7 @@ const handleBackspaceButton = () => {
 const handleEqualWithKeys = (event) => {
   const equalButton = document.querySelector('.equal');
   const clickEvent = new Event('click', handleEqual);
-  console.log(event.key);
+
   if (event.key === 'Enter') {
     equalButton.dispatchEvent(clickEvent);
   } else if (event.key === '=') {
