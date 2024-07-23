@@ -133,6 +133,10 @@ const backspaceButton = document.querySelector('.backspace');
 backspaceButton.addEventListener('click', handleBackspaceButton);
 
 // Apply handleEqual() onto 'Enter' key
+const body = document.body;
+body.addEventListener('keydown', handleEqualWithEnterKey);
+
+// Apply handleEqual() onto 'Enter' key
 const displayInput = document.querySelector('.display');
 displayInput.addEventListener('keydown', applyOperatorsSpace);
 displayInput.addEventListener('keyup', applyOperatorsSpace);
