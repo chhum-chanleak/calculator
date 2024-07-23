@@ -80,6 +80,8 @@ const handleButtons = () => {
       }
     });
   }
+  // Focus on display input field
+  display.focus();
 };
 
 // Remove preceding(previous) character
@@ -116,6 +118,8 @@ const applyOperatorsSpace = (event) => {
       displayInput.value += ' ';
   }
 };
+
+// 
 
 // Start the calculator
 createNumericalButtons();
