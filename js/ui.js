@@ -100,6 +100,19 @@ const handleEqualWithEnterKey = (event) => {
   }
 };
 
+// Apply space for operators when use keyboard
+const applyOperatorsSpace = (event) => {
+  const displayInput = document.querySelector('.display');
+
+  switch (event.key) {
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+      displayInput.value += ' ';
+  }
+};
+
 // Start the calculator
 createNumericalButtons();
 createOperatorButtons();
@@ -111,7 +124,7 @@ handleButtons();
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', clearCalculator);
 
-// Apply event onto Clear button
+// Apply event onto equal button
 const equalButton = document.querySelector('.equal');
 equalButton.addEventListener('click', handleEqual);
 
@@ -120,6 +133,7 @@ const backspaceButton = document.querySelector('.backspace');
 backspaceButton.addEventListener('click', handleBackspaceButton);
 
 // Apply handleEqual() onto 'Enter' key
-const body = document.body;
-body.addEventListener('keydown', handleEqualWithEnterKey);
+const displayInput = document.querySelector('.display');
+displayInput.addEventListener('keydown', applyOperatorsSpace);
+displayInput.addEventListener('keyup', applyOperatorsSpace);
 
