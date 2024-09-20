@@ -61,7 +61,7 @@ body {
   }
 
   & .numerical-button.equal {
-    background-color: #920396;
+    background-color: #d61add;
   }
 
   & .operators {
@@ -110,6 +110,78 @@ body {
 
   & .backspace {
     color: #f00;
+  }
+}
+
+/* For iphone 14 Pro Max. */
+@media (max-width: 430px) {
+
+  .calculator {
+    height: 280px;
+    width: 280px;
+  
+    & .numerical-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 8px;
+      width: 200px;
+      align-items: center;
+    }
+  
+    & button.operator-button {
+      display: inline-block;
+      height: 40px;
+      width: 60px;
+      font-size: 16px;
+    }
+  
+   }
+}
+/* For iPad Pro. */
+@media (min-width: 834px) and (max-width: 1023px) {
+
+  .instruction {
+    margin-top: 20%;
+    font-size: 20px;
+
+    & .do span {
+      color: #1d9305
+    }
+  
+    & .dont span {
+      color: #c90808;
+    }
+  }
+
+  .calculator {
+    height: 280px;
+    width: 400px;
+  
+    & .numerical-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 8px;
+      width: 300px;
+      align-items: center;
+    }
+  
+    & button.operator-button {
+      display: inline-block;
+      height: 40px;
+      width: 80px;
+      font-size: 20px;
+    }
+
+    & button.numerical-button {
+      width: 200px;
+    }
+    
+    input.display {
+      font-size: 20px;
+      height: 40px;
+    }
   }
 }
 
